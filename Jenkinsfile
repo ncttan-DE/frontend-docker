@@ -13,7 +13,7 @@ pipeline {
         }
 
         stage('Build & Push to ECR') {
-            steps {
+            steps { 
                 withCredentials([
                     string(credentialsId: 'aws-account-id', variable: 'AWS_ACCOUNT_ID'),
                     string(credentialsId: 'aws-region', variable: 'AWS_REGION'),
