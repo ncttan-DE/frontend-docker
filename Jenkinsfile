@@ -66,7 +66,7 @@ pipeline {
                 ]) {
                     sh "git clone https://${GITHUB_K8S}"
                             
-                    dir('k8s-cd/backend') {
+                    dir('k8s-cd/frontend') {
                         sh """
                         sed -i 's#image: .*\$#image: ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/frontend-docker:${IMAGE_TAG}#' frontend.yaml
 
