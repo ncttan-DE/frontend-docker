@@ -74,7 +74,7 @@ pipeline {
                         git config user.name "Jenkins CI"
                         git commit -am "Update image tag to ${IMAGE_TAG}"
                         """
-                    }
+                    } 
 
                     withCredentials([usernamePassword(credentialsId: 'github-token', usernameVariable: 'GIT_USER', passwordVariable: 'GIT_TOKEN')]) {
                         sh """
